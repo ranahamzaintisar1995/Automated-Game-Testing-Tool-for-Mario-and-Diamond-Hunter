@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_FrPGvUghEeaey9IbjMOnGA" name="Blank Package">
+  <packageImport xmi:id="_FrPGvkghEeaey9IbjMOnGA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_FrPGv0ghEeaey9IbjMOnGA" name="StateMachine1">
+    <region xmi:id="_FrPGwEghEeaey9IbjMOnGA" name="Region1">
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_FrPGwUghEeaey9IbjMOnGA"/>
+      <subvertex xmi:type="uml:State" xmi:id="_FrPGwkghEeaey9IbjMOnGA" name="Idle">
+        <eAnnotations xmi:id="_FrPGw0ghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPGxEghEeaey9IbjMOnGA" key="Stationary"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_FrPGxUghEeaey9IbjMOnGA" name="Move Forward">
+        <eAnnotations xmi:id="_FrPGxkghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPGx0ghEeaey9IbjMOnGA" key="Running"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_FrPGyEghEeaey9IbjMOnGA" name="Move Backward">
+        <eAnnotations xmi:id="_FrPGyUghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPGykghEeaey9IbjMOnGA" key="Running"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_FrPGy0ghEeaey9IbjMOnGA" name="EnemeyCollision">
+        <eAnnotations xmi:id="_FrPGzEghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPGzUghEeaey9IbjMOnGA" key="GetHit"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_FrPGzkghEeaey9IbjMOnGA" name="JumpOver">
+        <eAnnotations xmi:id="_FrPGz0ghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG0EghEeaey9IbjMOnGA" key="Jump"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_FrPG0UghEeaey9IbjMOnGA" name="ScoreIncrement">
+        <eAnnotations xmi:id="_FrPG0kghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG00ghEeaey9IbjMOnGA" key="CoinsCollect"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_FrPG1EghEeaey9IbjMOnGA" name="Win">
+        <eAnnotations xmi:id="_FrPG1UghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG1kghEeaey9IbjMOnGA" key="GameEnd"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_FrPG10ghEeaey9IbjMOnGA" name="Lose">
+        <eAnnotations xmi:id="_FrPG2EghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG2UghEeaey9IbjMOnGA" key="GameEnd"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_FrPG2kghEeaey9IbjMOnGA"/>
+      <subvertex xmi:type="uml:State" xmi:id="_FrPG20ghEeaey9IbjMOnGA" name="HitEnemey">
+        <eAnnotations xmi:id="_FrPG3EghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG3UghEeaey9IbjMOnGA" key="Jump"/>
+        </eAnnotations>
+      </subvertex>
+      <transition xmi:id="_FrPG3kghEeaey9IbjMOnGA" name="RunForward" source="_FrPGwkghEeaey9IbjMOnGA" target="_FrPGxUghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG30ghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG4EghEeaey9IbjMOnGA" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPG4UghEeaey9IbjMOnGA" name="RunBackward" source="_FrPGwkghEeaey9IbjMOnGA" target="_FrPGyEghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG4kghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG40ghEeaey9IbjMOnGA" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPG5EghEeaey9IbjMOnGA" name="RunBackwardKeyReleased" source="_FrPGyEghEeaey9IbjMOnGA" target="_FrPGwkghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG5UghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG5kghEeaey9IbjMOnGA" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPG50ghEeaey9IbjMOnGA" name="RunForwardKeyReleased" source="_FrPGxUghEeaey9IbjMOnGA" target="_FrPGwkghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG6EghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG6UghEeaey9IbjMOnGA" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPG6kghEeaey9IbjMOnGA" name="RunForward" source="_FrPGxUghEeaey9IbjMOnGA" target="_FrPGxUghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG60ghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG7EghEeaey9IbjMOnGA" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPG7UghEeaey9IbjMOnGA" name="CoinsVisible" source="_FrPGxUghEeaey9IbjMOnGA" target="_FrPG0UghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG7kghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG70ghEeaey9IbjMOnGA" key="SystemGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPG8EghEeaey9IbjMOnGA" name="Enemey" source="_FrPGxUghEeaey9IbjMOnGA" target="_FrPGzkghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG8UghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG8kghEeaey9IbjMOnGA" key="SystemgGenerated"/>
+        </eAnnotations>
+        <effect xmi:type="uml:OpaqueBehavior" xmi:id="_FrPG80ghEeaey9IbjMOnGA" name="Effect">
+          <language></language>
+          <body>Cliff Visible</body>
+          <body>GhostVisisble</body>
+        </effect>
+      </transition>
+      <transition xmi:id="_FrPG9EghEeaey9IbjMOnGA" name="RunForward" source="_FrPGzkghEeaey9IbjMOnGA" target="_FrPGxUghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG9UghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG9kghEeaey9IbjMOnGA" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPG90ghEeaey9IbjMOnGA" name="If(Score&lt;500>" source="_FrPG0UghEeaey9IbjMOnGA" target="_FrPGxUghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG-EghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG-UghEeaey9IbjMOnGA" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPG-kghEeaey9IbjMOnGA" name="If(Score == 500))" source="_FrPG0UghEeaey9IbjMOnGA" target="_FrPG1EghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG-0ghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG_EghEeaey9IbjMOnGA" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPG_UghEeaey9IbjMOnGA" name="if( lifecount == 0)" source="_FrPGy0ghEeaey9IbjMOnGA" target="_FrPG10ghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPG_kghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPG_0ghEeaey9IbjMOnGA" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPHAEghEeaey9IbjMOnGA" name="EnemyVisible" source="_FrPGyEghEeaey9IbjMOnGA" target="_FrPGy0ghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHAUghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHAkghEeaey9IbjMOnGA" key="SystemGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPHA0ghEeaey9IbjMOnGA" name="RunBackward" source="_FrPGzkghEeaey9IbjMOnGA" target="_FrPGyEghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHBEghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHBUghEeaey9IbjMOnGA" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPHBkghEeaey9IbjMOnGA" name="Enemey" source="_FrPGyEghEeaey9IbjMOnGA" target="_FrPGzkghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHB0ghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHCEghEeaey9IbjMOnGA" key="SystemGenerated"/>
+        </eAnnotations>
+        <effect xmi:type="uml:OpaqueBehavior" xmi:id="_FrPHCUghEeaey9IbjMOnGA" name="Effect">
+          <language></language>
+          <body>Cliff Visible</body>
+        </effect>
+      </transition>
+      <transition xmi:id="_FrPHCkghEeaey9IbjMOnGA" name="CoinsVisible" source="_FrPGyEghEeaey9IbjMOnGA" target="_FrPG0UghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHC0ghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHDEghEeaey9IbjMOnGA" key="SystemGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPHDUghEeaey9IbjMOnGA" name="RunBackward" source="_FrPGyEghEeaey9IbjMOnGA" target="_FrPGyEghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHDkghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHD0ghEeaey9IbjMOnGA" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPHEEghEeaey9IbjMOnGA" source="_FrPG10ghEeaey9IbjMOnGA" target="_FrPG2kghEeaey9IbjMOnGA"/>
+      <transition xmi:id="_FrPHEUghEeaey9IbjMOnGA" source="_FrPG1EghEeaey9IbjMOnGA" target="_FrPG2kghEeaey9IbjMOnGA"/>
+      <transition xmi:id="_FrPHEkghEeaey9IbjMOnGA" name="if( lifecount > 0)" source="_FrPGy0ghEeaey9IbjMOnGA" target="_FrPGyEghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHE0ghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHFEghEeaey9IbjMOnGA" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPHFUghEeaey9IbjMOnGA" source="_FrPGwUghEeaey9IbjMOnGA" target="_FrPGwkghEeaey9IbjMOnGA"/>
+      <transition xmi:id="_FrPHFkghEeaey9IbjMOnGA" name="if( Score &lt; 500)" source="_FrPG0UghEeaey9IbjMOnGA" target="_FrPGyEghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHF0ghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHGEghEeaey9IbjMOnGA" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPHGUghEeaey9IbjMOnGA" name="EnemeyVisible" source="_FrPGxUghEeaey9IbjMOnGA" target="_FrPGy0ghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHGkghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHG0ghEeaey9IbjMOnGA" key="SystemGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPHHEghEeaey9IbjMOnGA" name="if(lifecount > 0 )" source="_FrPGy0ghEeaey9IbjMOnGA" target="_FrPGxUghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHHUghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHHkghEeaey9IbjMOnGA" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPHH0ghEeaey9IbjMOnGA" name="JumpOnEnemey" source="_FrPGzkghEeaey9IbjMOnGA" target="_FrPG20ghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHIEghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHIUghEeaey9IbjMOnGA" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_FrPHIkghEeaey9IbjMOnGA" name="EnemeyDead" source="_FrPG20ghEeaey9IbjMOnGA" target="_FrPG0UghEeaey9IbjMOnGA">
+        <eAnnotations xmi:id="_FrPHI0ghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FrPHJEghEeaey9IbjMOnGA" key="SystemGenerated"/>
+        </eAnnotations>
+      </transition>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:id="_FrPHJUghEeaey9IbjMOnGA">
+    <eAnnotations xmi:id="_FrPHJkghEeaey9IbjMOnGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Package>

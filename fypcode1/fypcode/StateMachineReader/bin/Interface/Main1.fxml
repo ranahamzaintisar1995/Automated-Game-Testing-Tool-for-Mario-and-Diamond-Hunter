@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <AnchorPane layoutY="1.0" prefHeight="601.0" prefWidth="700.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02557c" height="528.0" layoutX="438.0" layoutY="73.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="262.0" />
+            <TextArea fx:id="textAreaTestCases" layoutX="12.0" layoutY="289.0" prefHeight="300.0" prefWidth="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0375ab" height="78.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
+            <Label layoutX="74.0" layoutY="264.0" text="Test Cases">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="298.0" layoutY="266.0" text="Live Feed">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="textAreaLiveFeed" layoutX="227.0" layoutY="289.0" prefHeight="300.0" prefWidth="200.0" />
+            <Button fx:id="Exit" layoutX="627.0" layoutY="550.0" mnemonicParsing="false" onAction="#ExitGUI" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: tomato;" text="Exit" />
+            <Label layoutX="172.0" layoutY="20.0" prefHeight="37.0" prefWidth="384.0" text="Automated Game Testing Tool" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="453.0" layoutY="301.0" text="Previous State" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="456.0" layoutY="90.0" text="Goals Achieved" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CurrentState" layoutX="453.0" layoutY="323.0" prefHeight="25.0" prefWidth="230.0" />
+            <Label layoutX="457.0" layoutY="154.0" text="Diamonds Collected" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="bar1" layoutX="455.0" layoutY="118.0" prefHeight="0.0" prefWidth="171.0" progress="0.0" />
+            <ProgressBar fx:id="bar2" layoutX="455.0" layoutY="180.0" prefHeight="0.0" prefWidth="171.0" progress="0.0" />
+            <Label layoutX="454.0" layoutY="362.0" text="Current Transition" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CurrentTransitionText" layoutX="454.0" layoutY="383.0" prefHeight="25.0" prefWidth="230.0" />
+            <TextField fx:id="NextTransitionText" layoutX="455.0" layoutY="439.0" prefHeight="25.0" prefWidth="230.0" />
+            <TextField fx:id="PreviousTransitionText" layoutX="456.0" layoutY="493.0" prefHeight="25.0" prefWidth="230.0" />
+            <Label layoutX="456.0" layoutY="419.0" text="Next Transition" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="456.0" layoutY="473.0" text="Previous Transition" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="GoalsField" layoutX="634.0" layoutY="116.0" prefHeight="25.0" prefWidth="50.0" />
+            <TextField fx:id="DiamondsField" layoutX="634.0" layoutY="178.0" prefHeight="25.0" prefWidth="50.0" />
+            <Label layoutX="456.0" layoutY="217.0" text="Health" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="bar3" layoutX="455.0" layoutY="241.0" prefHeight="0.0" prefWidth="171.0" progress="0.0" />
+            <TextField fx:id="HealthField" layoutX="634.0" layoutY="238.0" prefHeight="25.0" prefWidth="50.0" />
+            <Button fx:id="OptionButton" layoutX="232.0" layoutY="142.0" mnemonicParsing="false" onAction="#Options" prefHeight="25.0" prefWidth="171.0" text="Select Game" />
+            <TextField fx:id="OptionTextArea" layoutX="41.0" layoutY="142.0" prefHeight="25.0" prefWidth="171.0" />
+            <Button fx:id="SelectStateMachine" layoutX="233.0" layoutY="106.0" mnemonicParsing="false" onAction="#SelectMachine" prefHeight="25.0" prefWidth="171.0" text="Select State Machine" />
+            <TextField fx:id="SelectStateMachineField" layoutX="42.0" layoutY="106.0" prefHeight="25.0" prefWidth="171.0" />
+            <Button fx:id="RunButton" layoutX="40.0" layoutY="182.0" mnemonicParsing="false" onAction="#RunButtonAction" prefHeight="37.0" prefWidth="365.0" style="-fx-background-color: limegreen;" text="Run" />
+            <Button fx:id="ClearButton" layoutX="453.0" layoutY="550.0" mnemonicParsing="false" onAction="#clearingFiles" prefHeight="25.0" prefWidth="60.0" text="Clear" />
+            <Button fx:id="ExitGame" layoutX="527.0" layoutY="550.0" mnemonicParsing="false" onAction="#ExitGameAction" prefHeight="25.0" prefWidth="88.0" text="Exit Game" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+Idle
+Move Forward
+Move backward
+Move Up
+Move Down
+choice
+DiamondCollected
+TreeAhead
+WaterAhead
+AutumnTreeCollided
+Bonus Added
+DiamondsComplete
+ZeroHealth
+BonusComplete

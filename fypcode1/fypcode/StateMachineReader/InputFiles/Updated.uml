@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_43tf1nXBEeaort3GOd6Hvw" name="Blank Package">
+  <packageImport xmi:id="_43tf13XBEeaort3GOd6Hvw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_43tf2HXBEeaort3GOd6Hvw" name="StateMachine1">
+    <region xmi:id="_43tf2XXBEeaort3GOd6Hvw" name="Region1">
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_43tf2nXBEeaort3GOd6Hvw"/>
+      <subvertex xmi:type="uml:State" xmi:id="_43tf23XBEeaort3GOd6Hvw" name="Idle">
+        <eAnnotations xmi:id="_43tf3HXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43tf3XXBEeaort3GOd6Hvw" key="Stationary"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_43tf3nXBEeaort3GOd6Hvw" name="Move Forward">
+        <eAnnotations xmi:id="_43tf33XBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43tf4HXBEeaort3GOd6Hvw" key="Running"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_43tf4XXBEeaort3GOd6Hvw" name="Move Backward">
+        <eAnnotations xmi:id="_43tf4nXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43tf43XBEeaort3GOd6Hvw" key="Running"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_43tf5HXBEeaort3GOd6Hvw" name="EnemeyCollision">
+        <eAnnotations xmi:id="_43tf5XXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43tf5nXBEeaort3GOd6Hvw" key="GetHit"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_43tf53XBEeaort3GOd6Hvw" name="JumpOver">
+        <eAnnotations xmi:id="_43tf6HXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43tf6XXBEeaort3GOd6Hvw" key="Jump"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_43tf6nXBEeaort3GOd6Hvw" name="ScoreIncrement">
+        <eAnnotations xmi:id="_43uGAHXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGAXXBEeaort3GOd6Hvw" key="CoinsCollect"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_43uGAnXBEeaort3GOd6Hvw" name="Win">
+        <eAnnotations xmi:id="_43uGA3XBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGBHXBEeaort3GOd6Hvw" key="GameEnd"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_43uGBXXBEeaort3GOd6Hvw" name="Lose">
+        <eAnnotations xmi:id="_43uGBnXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGB3XBEeaort3GOd6Hvw" key="GameEnd"/>
+        </eAnnotations>
+      </subvertex>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_43uGCHXBEeaort3GOd6Hvw"/>
+      <subvertex xmi:type="uml:State" xmi:id="_43uGCXXBEeaort3GOd6Hvw" name="HitEnemey">
+        <eAnnotations xmi:id="_43uGCnXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGC3XBEeaort3GOd6Hvw" key="Jump"/>
+        </eAnnotations>
+      </subvertex>
+      <transition xmi:id="_43uGDHXBEeaort3GOd6Hvw" name="RunForward" source="_43tf23XBEeaort3GOd6Hvw" target="_43tf3nXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGDXXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGDnXBEeaort3GOd6Hvw" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGD3XBEeaort3GOd6Hvw" name="RunBackward" source="_43tf23XBEeaort3GOd6Hvw" target="_43tf4XXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGEHXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGEXXBEeaort3GOd6Hvw" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGEnXBEeaort3GOd6Hvw" name="RunBackwardKeyReleased" source="_43tf4XXBEeaort3GOd6Hvw" target="_43tf23XBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGE3XBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGFHXBEeaort3GOd6Hvw" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGFXXBEeaort3GOd6Hvw" name="RunForwardKeyReleased" source="_43tf3nXBEeaort3GOd6Hvw" target="_43tf23XBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGFnXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGF3XBEeaort3GOd6Hvw" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGGHXBEeaort3GOd6Hvw" name="RunForward" source="_43tf3nXBEeaort3GOd6Hvw" target="_43tf3nXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGGXXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGGnXBEeaort3GOd6Hvw" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGG3XBEeaort3GOd6Hvw" name="CoinsVisible" source="_43tf3nXBEeaort3GOd6Hvw" target="_43tf6nXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGHHXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGHXXBEeaort3GOd6Hvw" key="SystemGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGHnXBEeaort3GOd6Hvw" name="Enemey" source="_43tf3nXBEeaort3GOd6Hvw" target="_43tf53XBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGH3XBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGIHXBEeaort3GOd6Hvw" key="SystemgGenerated"/>
+        </eAnnotations>
+        <effect xmi:type="uml:OpaqueBehavior" xmi:id="_43uGIXXBEeaort3GOd6Hvw" name="Effect">
+          <language></language>
+          <body>Cliff Visible</body>
+          <body>GhostVisisble</body>
+        </effect>
+      </transition>
+      <transition xmi:id="_43uGInXBEeaort3GOd6Hvw" name="RunForward" source="_43tf53XBEeaort3GOd6Hvw" target="_43tf3nXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGI3XBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGJHXBEeaort3GOd6Hvw" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGJXXBEeaort3GOd6Hvw" name="If(Score&lt;500>" source="_43tf6nXBEeaort3GOd6Hvw" target="_43tf3nXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGJnXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGJ3XBEeaort3GOd6Hvw" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGKHXBEeaort3GOd6Hvw" name="If(Score == 500))" source="_43tf6nXBEeaort3GOd6Hvw" target="_43uGAnXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGKXXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGKnXBEeaort3GOd6Hvw" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGK3XBEeaort3GOd6Hvw" name="if( lifecount == 0)" source="_43tf5HXBEeaort3GOd6Hvw" target="_43uGBXXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGLHXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGLXXBEeaort3GOd6Hvw" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGLnXBEeaort3GOd6Hvw" name="EnemyVisible" source="_43tf4XXBEeaort3GOd6Hvw" target="_43tf5HXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGL3XBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGMHXBEeaort3GOd6Hvw" key="SystemGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGMXXBEeaort3GOd6Hvw" name="RunBackward" source="_43tf53XBEeaort3GOd6Hvw" target="_43tf4XXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGMnXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGM3XBEeaort3GOd6Hvw" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGNHXBEeaort3GOd6Hvw" name="Enemey" source="_43tf4XXBEeaort3GOd6Hvw" target="_43tf53XBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGNXXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGNnXBEeaort3GOd6Hvw" key="SystemGenerated"/>
+        </eAnnotations>
+        <effect xmi:type="uml:OpaqueBehavior" xmi:id="_43uGN3XBEeaort3GOd6Hvw" name="Effect">
+          <language></language>
+          <body>Cliff Visible</body>
+        </effect>
+      </transition>
+      <transition xmi:id="_43uGOHXBEeaort3GOd6Hvw" name="CoinsVisible" source="_43tf4XXBEeaort3GOd6Hvw" target="_43tf6nXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGOXXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGOnXBEeaort3GOd6Hvw" key="SystemGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGO3XBEeaort3GOd6Hvw" name="RunBackward" source="_43tf4XXBEeaort3GOd6Hvw" target="_43tf4XXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGPHXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGPXXBEeaort3GOd6Hvw" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGPnXBEeaort3GOd6Hvw" source="_43uGBXXBEeaort3GOd6Hvw" target="_43uGCHXBEeaort3GOd6Hvw"/>
+      <transition xmi:id="_43uGP3XBEeaort3GOd6Hvw" source="_43uGAnXBEeaort3GOd6Hvw" target="_43uGCHXBEeaort3GOd6Hvw"/>
+      <transition xmi:id="_43uGQHXBEeaort3GOd6Hvw" name="if( lifecount > 0)" source="_43tf5HXBEeaort3GOd6Hvw" target="_43tf4XXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGQXXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGQnXBEeaort3GOd6Hvw" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGQ3XBEeaort3GOd6Hvw" source="_43tf2nXBEeaort3GOd6Hvw" target="_43tf23XBEeaort3GOd6Hvw"/>
+      <transition xmi:id="_43uGRHXBEeaort3GOd6Hvw" name="if( Score &lt; 500)" source="_43tf6nXBEeaort3GOd6Hvw" target="_43tf4XXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGRXXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGRnXBEeaort3GOd6Hvw" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGR3XBEeaort3GOd6Hvw" name="EnemeyVisible" source="_43tf3nXBEeaort3GOd6Hvw" target="_43tf5HXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGSHXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGSXXBEeaort3GOd6Hvw" key="SystemGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGSnXBEeaort3GOd6Hvw" name="if(lifecount > 0 )" source="_43tf5HXBEeaort3GOd6Hvw" target="_43tf3nXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGS3XBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGTHXBEeaort3GOd6Hvw" key="Check"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGTXXBEeaort3GOd6Hvw" name="JumpOnEnemey" source="_43tf53XBEeaort3GOd6Hvw" target="_43uGCXXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGTnXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGT3XBEeaort3GOd6Hvw" key="UserGenerated"/>
+        </eAnnotations>
+      </transition>
+      <transition xmi:id="_43uGUHXBEeaort3GOd6Hvw" name="EnemeyDead" source="_43uGCXXBEeaort3GOd6Hvw" target="_43tf6nXBEeaort3GOd6Hvw">
+        <eAnnotations xmi:id="_43uGUXXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_43uGUnXBEeaort3GOd6Hvw" key="SystemGenerated"/>
+        </eAnnotations>
+      </transition>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:id="_43uGU3XBEeaort3GOd6Hvw">
+    <eAnnotations xmi:id="_43uGVHXBEeaort3GOd6Hvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Model>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_F_rX_7dBEeS1i8ut72CPZg" name="m1">
+  <packageImport xmi:id="_F_rYALdBEeS1i8ut72CPZg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_F_rYAbdBEeS1i8ut72CPZg" name="Mario">
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_F_rYArdBEeS1i8ut72CPZg" name="StateMachine1">
+      <region xmi:id="_F_rYA7dBEeS1i8ut72CPZg" name="Region1">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_F_rYBLdBEeS1i8ut72CPZg"/>
+        <subvertex xmi:type="uml:State" xmi:id="_F_rYBbdBEeS1i8ut72CPZg" name="idle"/>
+        <subvertex xmi:type="uml:State" xmi:id="_F_rYBrdBEeS1i8ut72CPZg" name="die"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_F_rYB7dBEeS1i8ut72CPZg"/>
+        <transition xmi:id="_F_rYCLdBEeS1i8ut72CPZg" source="_F_rYBLdBEeS1i8ut72CPZg" target="_F_rYBbdBEeS1i8ut72CPZg"/>
+        <transition xmi:id="_F_rYCbdBEeS1i8ut72CPZg" source="_F_rYBbdBEeS1i8ut72CPZg" target="_F_rYBrdBEeS1i8ut72CPZg">
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_F_rYCrdBEeS1i8ut72CPZg" name="dieMario()"/>
+        </transition>
+        <transition xmi:id="_F_rYC7dBEeS1i8ut72CPZg" source="_F_rYBrdBEeS1i8ut72CPZg" target="_F_rYB7dBEeS1i8ut72CPZg"/>
+      </region>
+    </ownedBehavior>
+  </packagedElement>
+  <profileApplication xmi:id="_F_rYDLdBEeS1i8ut72CPZg">
+    <eAnnotations xmi:id="_F_rYDbdBEeS1i8ut72CPZg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Model>

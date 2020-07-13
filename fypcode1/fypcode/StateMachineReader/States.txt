@@ -1,0 +1,18 @@
+idle
+run forward
+Ghost Visible
+Cliff Visible
+Edge Visible
+Climb Edge
+Kill ghost
+get hit
+Climb cliff
+die
+run backward
+Ghost Visible
+Kill ghost
+get hit
+Cliff Visible
+Edge Visible
+climb cliff
+climb edge

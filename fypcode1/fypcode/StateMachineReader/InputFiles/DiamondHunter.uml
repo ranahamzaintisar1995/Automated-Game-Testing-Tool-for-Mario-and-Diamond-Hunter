@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:platformprofile="http:///schemas/platformprofile/_Ow538MbiEeSbYpcsKyygzQ/67" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/platformprofile/_Ow538MbiEeSbYpcsKyygzQ/67 ../Downloads/Compressed/Mario%20Diagrams%20+%20UML_2/Profile.profile.uml#_OxcqgMbiEeSbYpcsKyygzQ">
+  <uml:Package xmi:id="_jvjqAKKwEeaqht_jdhoUMA" name="Blank Package">
+    <packageImport xmi:id="_jvjqAaKwEeaqht_jdhoUMA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_jvjqAqKwEeaqht_jdhoUMA" name="StateMachine1">
+      <region xmi:id="_jvjqA6KwEeaqht_jdhoUMA" name="Region1">
+               <subvertex xmi:type="uml:State" xmi:id="_jvjqCaKwEeaqht_jdhoUMA" name="Idle"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_jvjqBKKwEeaqht_jdhoUMA"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqBaKwEeaqht_jdhoUMA" name="Move Forward"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqBqKwEeaqht_jdhoUMA" name="Move backward"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqB6KwEeaqht_jdhoUMA" name="Move Up"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqCKKwEeaqht_jdhoUMA" name="Move Down"/>
+ 		<subvertex xmi:type="uml:Pseudostate" xmi:id="_jvjqFaKwEeaqht_jdhoUMA" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqCqKwEeaqht_jdhoUMA" name="DiamondCollected"/>
+         <subvertex xmi:type="uml:Pseudostate" xmi:id="_jvjqE6KwEeaqht_jdhoUMA" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqC6KwEeaqht_jdhoUMA" name="TreeAhead"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqDKKwEeaqht_jdhoUMA" name="WaterAhead"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqDaKwEeaqht_jdhoUMA" name="AutumnTreeCollided"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_jvjqFKKwEeaqht_jdhoUMA" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqD6KwEeaqht_jdhoUMA" name="Bonus Added"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_jvjqDqKwEeaqht_jdhoUMA" kind="choice"/> 
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqEKKwEeaqht_jdhoUMA" name="DiamondsComplete"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqEaKwEeaqht_jdhoUMA" name="ZeroHealth"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jvjqEqKwEeaqht_jdhoUMA" name="BonusComplete"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_jvjqFqKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqF6KwEeaqht_jdhoUMA" source="_jvjqBKKwEeaqht_jdhoUMA" target="_jvjqCaKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqGKKwEeaqht_jdhoUMA" name="RunForward" source="_jvjqCaKwEeaqht_jdhoUMA" target="_jvjqBaKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqGaKwEeaqht_jdhoUMA" name="RunBackward" source="_jvjqCaKwEeaqht_jdhoUMA" target="_jvjqBqKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqGqKwEeaqht_jdhoUMA" name="RunDown" source="_jvjqCaKwEeaqht_jdhoUMA" target="_jvjqCKKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqG6KwEeaqht_jdhoUMA" name="RunUp" source="_jvjqCaKwEeaqht_jdhoUMA" target="_jvjqB6KwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqHKKwEeaqht_jdhoUMA" name="UpdateScore" source="_jvjqCqKwEeaqht_jdhoUMA" target="_jvjqDqKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqHaKwEeaqht_jdhoUMA" name="CheckDiamondsCollected" source="_jvjqDqKwEeaqht_jdhoUMA" target="_jvjqEKKwEeaqht_jdhoUMA" guard="_jvjqHqKwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqHqKwEeaqht_jdhoUMA" constrainedElement="_jvjqHaKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqH6KwEeaqht_jdhoUMA">
+              <language></language>
+              <body>Diamonds == 25</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqIKKwEeaqht_jdhoUMA" name="CheckDiamondsCollected" source="_jvjqDqKwEeaqht_jdhoUMA" target="_jvjqCaKwEeaqht_jdhoUMA" guard="_jvjqIaKwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqIaKwEeaqht_jdhoUMA" constrainedElement="_jvjqIKKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqIqKwEeaqht_jdhoUMA">
+              <language></language>
+              <body>diamonds >=0 &amp;&amp; diamonds &lt; 25</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqI6KwEeaqht_jdhoUMA" name="UpdateHealth" source="_jvjqDKKwEeaqht_jdhoUMA" target="_jvjqE6KwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqJKKwEeaqht_jdhoUMA" name="UpdateHealth" source="_jvjqDaKwEeaqht_jdhoUMA" target="_jvjqE6KwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqJaKwEeaqht_jdhoUMA" name="CheckHealth" source="_jvjqE6KwEeaqht_jdhoUMA" target="_jvjqEaKwEeaqht_jdhoUMA" guard="_jvjqJqKwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqJqKwEeaqht_jdhoUMA" constrainedElement="_jvjqJaKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqJ6KwEeaqht_jdhoUMA">
+              <language></language>
+              <body>health == 0</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqKKKwEeaqht_jdhoUMA" name="UpdateBonus" source="_jvjqD6KwEeaqht_jdhoUMA" target="_jvjqFKKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqKaKwEeaqht_jdhoUMA" name="CheckBonus" source="_jvjqFKKwEeaqht_jdhoUMA" target="_jvjqEqKwEeaqht_jdhoUMA" guard="_jvjqKqKwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqKqKwEeaqht_jdhoUMA" constrainedElement="_jvjqKaKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqK6KwEeaqht_jdhoUMA">
+              <language></language>
+              <body>Bonus == 2</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqLKKwEeaqht_jdhoUMA" name="CheckBonus" source="_jvjqFKKwEeaqht_jdhoUMA" target="_jvjqCaKwEeaqht_jdhoUMA" guard="_jvjqLaKwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqLaKwEeaqht_jdhoUMA" constrainedElement="_jvjqLKKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqLqKwEeaqht_jdhoUMA">
+              <language></language>
+              <body>Bonus >=0 || Bonus &lt;2</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqL6KwEeaqht_jdhoUMA" name="CheckHealth" source="_jvjqE6KwEeaqht_jdhoUMA" target="_jvjqCaKwEeaqht_jdhoUMA" guard="_jvjqMKKwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqMKKwEeaqht_jdhoUMA" constrainedElement="_jvjqL6KwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqMaKwEeaqht_jdhoUMA">
+              <language></language>
+              <body>Health &lt;= 3 &amp;&amp; Health >0</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqMqKwEeaqht_jdhoUMA" name="ObstructionVisibleForward" source="_jvjqBaKwEeaqht_jdhoUMA" target="_jvjqFaKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqM6KwEeaqht_jdhoUMA" name="ObstructionVisibleBackward" source="_jvjqBqKwEeaqht_jdhoUMA" target="_jvjqFaKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqNKKwEeaqht_jdhoUMA" name="ObstructionVisibleDown" source="_jvjqCKKwEeaqht_jdhoUMA" target="_jvjqFaKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqNaKwEeaqht_jdhoUMA" name="ObstructionVisibleUp" source="_jvjqB6KwEeaqht_jdhoUMA" target="_jvjqFaKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqNqKwEeaqht_jdhoUMA" name="PickDiamond" source="_jvjqFaKwEeaqht_jdhoUMA" target="_jvjqCqKwEeaqht_jdhoUMA" guard="_jvjqN6KwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqN6KwEeaqht_jdhoUMA" constrainedElement="_jvjqNqKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqOKKwEeaqht_jdhoUMA">
+              <language></language>
+              <body>diamondVisible == true</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqOaKwEeaqht_jdhoUMA" name="StopMoving" source="_jvjqFaKwEeaqht_jdhoUMA" target="_jvjqC6KwEeaqht_jdhoUMA" guard="_jvjqOqKwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqOqKwEeaqht_jdhoUMA" constrainedElement="_jvjqOaKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqO6KwEeaqht_jdhoUMA">
+              <language></language>
+              <body>TreeVissible == true</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqPKKwEeaqht_jdhoUMA" name="Drown" source="_jvjqFaKwEeaqht_jdhoUMA" target="_jvjqDKKwEeaqht_jdhoUMA" guard="_jvjqPaKwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqPaKwEeaqht_jdhoUMA" constrainedElement="_jvjqPKKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqPqKwEeaqht_jdhoUMA">
+              <language></language>
+              <body>WaterVisible == true</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqP6KwEeaqht_jdhoUMA" name="GetHit" source="_jvjqFaKwEeaqht_jdhoUMA" target="_jvjqDaKwEeaqht_jdhoUMA" guard="_jvjqQKKwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqQKKwEeaqht_jdhoUMA" constrainedElement="_jvjqP6KwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqQaKwEeaqht_jdhoUMA">
+              <language></language>
+              <body>AutumnTree == true</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqQqKwEeaqht_jdhoUMA" name="CollectBonus" source="_jvjqFaKwEeaqht_jdhoUMA" target="_jvjqD6KwEeaqht_jdhoUMA" guard="_jvjqQ6KwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqQ6KwEeaqht_jdhoUMA" constrainedElement="_jvjqQqKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqRKKwEeaqht_jdhoUMA">
+              <language></language>
+              <body>Axe == true || Ship == true</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqRaKwEeaqht_jdhoUMA" name="GoIdle" source="_jvjqC6KwEeaqht_jdhoUMA" target="_jvjqCaKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqRqKwEeaqht_jdhoUMA" source="_jvjqEaKwEeaqht_jdhoUMA" target="_jvjqFqKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqR6KwEeaqht_jdhoUMA" source="_jvjqEKKwEeaqht_jdhoUMA" target="_jvjqFqKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqSKKwEeaqht_jdhoUMA" source="_jvjqEqKwEeaqht_jdhoUMA" target="_jvjqFqKwEeaqht_jdhoUMA"/>
+        <transition xmi:id="_jvjqSaKwEeaqht_jdhoUMA" name="Cuttree" source="_jvjqDaKwEeaqht_jdhoUMA" target="_jvjqDaKwEeaqht_jdhoUMA" guard="_jvjqTKKwEeaqht_jdhoUMA">
+          <eAnnotations xmi:id="_jvjqSqKwEeaqht_jdhoUMA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_jvjqS6KwEeaqht_jdhoUMA" key="GameQueryEvent"/>
+          </eAnnotations>
+          <ownedRule xmi:id="_jvjqTKKwEeaqht_jdhoUMA" constrainedElement="_jvjqSaKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqTaKwEeaqht_jdhoUMA">
+              <language></language>
+              <body>Axe ==true</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_jvjqTqKwEeaqht_jdhoUMA" name="float" source="_jvjqDKKwEeaqht_jdhoUMA" target="_jvjqDKKwEeaqht_jdhoUMA" guard="_jvjqT6KwEeaqht_jdhoUMA">
+          <ownedRule xmi:id="_jvjqT6KwEeaqht_jdhoUMA" constrainedElement="_jvjqTqKwEeaqht_jdhoUMA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_jvjqUKKwEeaqht_jdhoUMA">
+              <language></language>
+              <body>Ship == true</body>
+            </specification>
+          </ownedRule>
+        </transition>
+      </region>
+    </packagedElement>
+    <profileApplication xmi:id="_jvjqUaKwEeaqht_jdhoUMA">
+      <eAnnotations xmi:id="_jvjqUqKwEeaqht_jdhoUMA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_jvjqU6KwEeaqht_jdhoUMA">
+      <eAnnotations xmi:id="_jvjqVKKwEeaqht_jdhoUMA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../Downloads/Compressed/Mario%20Diagrams%20+%20UML_2/Profile.profile.uml#_OxcqgMbiEeSbYpcsKyygzQ"/>
+      </eAnnotations>
+      <appliedProfile href="../Downloads/Compressed/Mario%20Diagrams%20+%20UML_2/Profile.profile.uml#_6aqRsMC5EeSG9Y-MJXx3Mw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_jvjqVaKwEeaqht_jdhoUMA">
+      <eAnnotations xmi:id="_jvjqVqKwEeaqht_jdhoUMA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../Downloads/Compressed/Mario%20Diagrams%20+%20UML_2/Deployment.profile.uml#_IrdAUMmBEdqBcN1R6EvWUw"/>
+      </eAnnotations>
+      <appliedProfile href="../Downloads/Compressed/Mario%20Diagrams%20+%20UML_2/Deployment.profile.uml#_vjbuwOvHEdiDX5bji0iVSA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_jvjqV6KwEeaqht_jdhoUMA">
+      <eAnnotations xmi:id="_jvjqWKKwEeaqht_jdhoUMA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../Downloads/Compressed/Mario%20Diagrams%20+%20UML_2/Default.profile.uml#_fNwoAAqoEd6-N_NOT9vsCA"/>
+      </eAnnotations>
+      <appliedProfile href="../Downloads/Compressed/Mario%20Diagrams%20+%20UML_2/Default.profile.uml#_a_S3wNWLEdiy4IqP8whjFA"/>
+    </profileApplication>
+  </uml:Package>
+  <platformprofile:Running xmi:id="_jvjqWaKwEeaqht_jdhoUMA" base_State="_jvjqBaKwEeaqht_jdhoUMA"/>
+  <platformprofile:Running xmi:id="_jvjqWqKwEeaqht_jdhoUMA" base_State="_jvjqBqKwEeaqht_jdhoUMA"/>
+  <platformprofile:Stationary xmi:id="_jvjqW6KwEeaqht_jdhoUMA" base_State="_jvjqCaKwEeaqht_jdhoUMA"/>
+  <platformprofile:Running xmi:id="_jvjqXKKwEeaqht_jdhoUMA" base_State="_jvjqCKKwEeaqht_jdhoUMA"/>
+  <platformprofile:Running xmi:id="_jvjqXaKwEeaqht_jdhoUMA" base_State="_jvjqB6KwEeaqht_jdhoUMA"/>
+  <platformprofile:SeeObstacle xmi:id="_jvjqXqKwEeaqht_jdhoUMA" base_State="_jvjqC6KwEeaqht_jdhoUMA"/>
+  <platformprofile:SeeObstacle xmi:id="_jvjqX6KwEeaqht_jdhoUMA" base_State="_jvjqDKKwEeaqht_jdhoUMA"/>
+  <platformprofile:SeeObstacle xmi:id="_jvjqYKKwEeaqht_jdhoUMA" base_State="_jvjqDaKwEeaqht_jdhoUMA"/>
+  <platformprofile:Win xmi:id="_jvjqYaKwEeaqht_jdhoUMA" base_State="_jvjqEKKwEeaqht_jdhoUMA"/>
+  <platformprofile:Dead xmi:id="_jvjqYqKwEeaqht_jdhoUMA" base_State="_jvjqEaKwEeaqht_jdhoUMA"/>
+  <platformprofile:Loose xmi:id="_jvjqY6KwEeaqht_jdhoUMA" base_State="_jvjqEaKwEeaqht_jdhoUMA"/>
+  <platformprofile:UserGenerated xmi:id="_jvjqZKKwEeaqht_jdhoUMA" base_Transition="_jvjqGKKwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqZaKwEeaqht_jdhoUMA" base_Transition="_jvjqIKKwEeaqht_jdhoUMA"/>
+  <platformprofile:SystemGenerated xmi:id="_jvjqZqKwEeaqht_jdhoUMA" base_Transition="_jvjqMqKwEeaqht_jdhoUMA"/>
+  <platformprofile:SystemGenerated xmi:id="_jvjqZ6KwEeaqht_jdhoUMA" base_Transition="_jvjqM6KwEeaqht_jdhoUMA"/>
+  <platformprofile:SystemGenerated xmi:id="_jvjqaKKwEeaqht_jdhoUMA" base_Transition="_jvjqRaKwEeaqht_jdhoUMA"/>
+  <platformprofile:UserGenerated xmi:id="_jvjqaaKwEeaqht_jdhoUMA" base_Transition="_jvjqGaKwEeaqht_jdhoUMA"/>
+  <platformprofile:UserGenerated xmi:id="_jvjqaqKwEeaqht_jdhoUMA" base_Transition="_jvjqGqKwEeaqht_jdhoUMA"/>
+  <platformprofile:UserGenerated xmi:id="_jvjqa6KwEeaqht_jdhoUMA" base_Transition="_jvjqG6KwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqbKKwEeaqht_jdhoUMA" base_Transition="_jvjqNqKwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqbaKwEeaqht_jdhoUMA" base_Transition="_jvjqOaKwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqbqKwEeaqht_jdhoUMA" base_Transition="_jvjqPKKwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqb6KwEeaqht_jdhoUMA" base_Transition="_jvjqP6KwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqcKKwEeaqht_jdhoUMA" base_Transition="_jvjqQqKwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqcaKwEeaqht_jdhoUMA" base_Transition="_jvjqL6KwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqcqKwEeaqht_jdhoUMA" base_Transition="_jvjqLKKwEeaqht_jdhoUMA"/>
+  <platformprofile:SystemGenerated xmi:id="_jvjqc6KwEeaqht_jdhoUMA" base_Transition="_jvjqKKKwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqdKKwEeaqht_jdhoUMA" base_Transition="_jvjqKaKwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqdaKwEeaqht_jdhoUMA" base_Transition="_jvjqJaKwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqdqKwEeaqht_jdhoUMA" base_Transition="_jvjqHaKwEeaqht_jdhoUMA"/>
+  <platformprofile:SystemGenerated xmi:id="_jvjqd6KwEeaqht_jdhoUMA" base_Transition="_jvjqHKKwEeaqht_jdhoUMA"/>
+  <platformprofile:SystemGenerated xmi:id="_jvjqeKKwEeaqht_jdhoUMA" base_Transition="_jvjqNKKwEeaqht_jdhoUMA"/>
+  <platformprofile:SystemGenerated xmi:id="_jvjqeaKwEeaqht_jdhoUMA" base_Transition="_jvjqNaKwEeaqht_jdhoUMA"/>
+  <platformprofile:SystemGenerated xmi:id="_jvjqeqKwEeaqht_jdhoUMA" base_Transition="_jvjqI6KwEeaqht_jdhoUMA"/>
+  <platformprofile:SystemGenerated xmi:id="_jvjqe6KwEeaqht_jdhoUMA" base_Transition="_jvjqJKKwEeaqht_jdhoUMA"/>
+  <platformprofile:SeeObstacle xmi:id="_jvjqfKKwEeaqht_jdhoUMA" base_State="_jvjqD6KwEeaqht_jdhoUMA"/>
+  <platformprofile:Win xmi:id="_jvjqfaKwEeaqht_jdhoUMA" base_State="_jvjqEqKwEeaqht_jdhoUMA"/>
+  <platformprofile:SeeObstacle xmi:id="_jvjqfqKwEeaqht_jdhoUMA" base_State="_jvjqCqKwEeaqht_jdhoUMA"/>
+  <platformprofile:GameQueryEvent xmi:id="_jvjqf6KwEeaqht_jdhoUMA" base_Transition="_jvjqTqKwEeaqht_jdhoUMA"/>
+</xmi:XMI>

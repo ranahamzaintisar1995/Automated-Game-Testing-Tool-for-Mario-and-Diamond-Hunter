@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <AnchorPane layoutY="1.0" prefHeight="601.0" prefWidth="700.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#078366" height="528.0" layoutX="454.0" layoutY="73.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="246.0" />
+            <TextArea fx:id="textAreaTestCases" layoutX="478.0" layoutY="100.0" prefHeight="135.0" prefWidth="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03ab8e" height="78.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
+            <Label layoutX="538.0" layoutY="246.0" text="Test Cases" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="544.0" layoutY="575.0" text="Live Feed" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="textAreaLiveFeed" layoutX="478.0" layoutY="274.0" prefHeight="294.0" prefWidth="200.0" />
+            <Button fx:id="Exit" layoutX="265.0" layoutY="562.0" mnemonicParsing="false" onAction="#ExitGUI" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: pink;" text="Exit" />
+            <Label layoutX="172.0" layoutY="20.0" prefHeight="37.0" prefWidth="384.0" text="Automated Game Testing Tool" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="263.0" layoutY="299.0" text="Current State">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="299.0" text="Goals Achieved">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CurrentState" layoutX="263.0" layoutY="319.0" prefHeight="25.0" prefWidth="165.0" />
+            <Label layoutX="23.0" layoutY="393.0" text="Diamonds Collected">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="bar1" layoutX="14.0" layoutY="344.0" prefWidth="200.0" progress="0.0" />
+            <ProgressBar fx:id="bar2" layoutX="14.0" layoutY="433.0" prefWidth="200.0" progress="0.0" />
+            <Label layoutX="263.0" layoutY="356.0" text="Current Transition">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CurrentTransitionText" layoutX="263.0" layoutY="375.0" prefHeight="25.0" prefWidth="164.0" />
+            <TextField fx:id="NextTransitionText" layoutX="264.0" layoutY="430.0" prefHeight="25.0" prefWidth="164.0" />
+            <TextField fx:id="PreviousTransitionText" layoutX="263.0" layoutY="483.0" prefHeight="25.0" prefWidth="166.0" />
+            <Label layoutX="264.0" layoutY="412.0" text="Next Transition">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="263.0" layoutY="465.0" text="Previous Transition">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="GoalsField" layoutX="164.0" layoutY="296.0" prefHeight="25.0" prefWidth="49.0" />
+            <TextField fx:id="DiamondsField" layoutX="164.0" layoutY="390.0" prefHeight="25.0" prefWidth="49.0" />
+            <Label layoutX="25.0" layoutY="482.0" text="Health">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="bar3" layoutX="14.0" layoutY="519.0" prefWidth="200.0" progress="0.0" />
+            <TextField fx:id="HealthField" layoutX="164.0" layoutY="479.0" prefHeight="25.0" prefWidth="49.0" />
+            <Button fx:id="OptionButton" layoutX="235.0" layoutY="149.0" mnemonicParsing="false" onAction="#Options" prefHeight="25.0" prefWidth="171.0" text="Select Game" />
+            <TextField fx:id="OptionTextArea" layoutX="46.0" layoutY="150.0" prefHeight="25.0" prefWidth="171.0" />
+            <Button fx:id="SelectStateMachine" layoutX="237.0" layoutY="105.0" mnemonicParsing="false" onAction="#SelectMachine" prefHeight="25.0" prefWidth="171.0" text="Select State Machine" />
+            <TextField fx:id="SelectStateMachineField" layoutX="46.0" layoutY="105.0" prefHeight="25.0" prefWidth="171.0" />
+            <Button fx:id="RunButton" layoutX="47.0" layoutY="192.0" mnemonicParsing="false" onAction="#RunButtonAction" prefHeight="37.0" prefWidth="365.0" style="-fx-background-color: LightGreen;" text="Run" />
+            <Button fx:id="ClearButton" layoutX="266.0" layoutY="532.0" mnemonicParsing="false" onAction="#clearingFiles" prefHeight="25.0" prefWidth="74.0" text="Clear" />
+            <Button fx:id="ExitGame" layoutX="346.0" layoutY="532.0" mnemonicParsing="false" onAction="#ExitGameAction" prefHeight="25.0" prefWidth="88.0" text="Exit Game" />
+            <Separator layoutX="4.0" layoutY="254.0" prefHeight="3.0" prefWidth="449.0" style="-fx-background-color: gray;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

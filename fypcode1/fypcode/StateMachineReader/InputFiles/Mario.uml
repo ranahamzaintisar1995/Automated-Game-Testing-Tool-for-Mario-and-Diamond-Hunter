@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_PqH0srsmEeS6K8Oky6hvng" name="Mario">
+  <packageImport xmi:id="_PqH0s7smEeS6K8Oky6hvng">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:id="_PqH0tLsmEeS6K8Oky6hvng">
+    <importedPackage xmi:type="uml:Model" href="JAX-RSReference.uml#_Pp-qG7smEeS6K8Oky6hvng"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH0tbsmEeS6K8Oky6hvng" name="Mario">
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_PqH0trsmEeS6K8Oky6hvng" name="StateMachine1">
+      <region xmi:id="_PqH0t7smEeS6K8Oky6hvng" name="Region1">
+        <subvertex xmi:type="uml:State" xmi:id="_PqH0uLsmEeS6K8Oky6hvng" name="idle"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_PqH0ubsmEeS6K8Oky6hvng"/>
+        <subvertex xmi:type="uml:State" xmi:id="_PqH0ursmEeS6K8Oky6hvng" name="run forward">
+          <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_PqH0u7smEeS6K8Oky6hvng" name="moveforward">
+            <language></language>
+            <body>moveforward</body>
+          </doActivity>
+          <region xmi:id="_PqH0vLsmEeS6K8Oky6hvng" name="Region1">
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_PqH0vbsmEeS6K8Oky6hvng"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_PqH0vrsmEeS6K8Oky6hvng" kind="choice"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH0v7smEeS6K8Oky6hvng" name="Ghost Visible"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH0wLsmEeS6K8Oky6hvng" name="Cliff Visible"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH0wbsmEeS6K8Oky6hvng" name="Edge Visible"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH0wrsmEeS6K8Oky6hvng" name="Climb Edge"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH0w7smEeS6K8Oky6hvng" name="Kill ghost"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH0xLsmEeS6K8Oky6hvng" name="get hit"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH0xbsmEeS6K8Oky6hvng" name="Climb cliff"/>
+            <transition xmi:id="_PqH0xrsmEeS6K8Oky6hvng" source="_PqH0vbsmEeS6K8Oky6hvng" target="_PqH0vrsmEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH0x7smEeS6K8Oky6hvng" name="Obstacles"/>
+            </transition>
+            <transition xmi:id="_PqH0yLsmEeS6K8Oky6hvng" source="_PqH0vrsmEeS6K8Oky6hvng" target="_PqH0v7smEeS6K8Oky6hvng" guard="_PqH0ybsmEeS6K8Oky6hvng">
+              <ownedRule xmi:id="_PqH0ybsmEeS6K8Oky6hvng" constrainedElement="_PqH0yLsmEeS6K8Oky6hvng">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH0yrsmEeS6K8Oky6hvng">
+                  <language>OCL</language>
+                  <body>Obstacle.type=ghost</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_PqH0y7smEeS6K8Oky6hvng" source="_PqH0vrsmEeS6K8Oky6hvng" target="_PqH0wLsmEeS6K8Oky6hvng" guard="_PqH0zLsmEeS6K8Oky6hvng">
+              <ownedRule xmi:id="_PqH0zLsmEeS6K8Oky6hvng" constrainedElement="_PqH0y7smEeS6K8Oky6hvng">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH0zbsmEeS6K8Oky6hvng">
+                  <language>OCL</language>
+                  <body>Obstacle.type=cliff</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_PqH0zrsmEeS6K8Oky6hvng" source="_PqH0vrsmEeS6K8Oky6hvng" target="_PqH0wbsmEeS6K8Oky6hvng" guard="_PqH0z7smEeS6K8Oky6hvng">
+              <ownedRule xmi:id="_PqH0z7smEeS6K8Oky6hvng" constrainedElement="_PqH0zrsmEeS6K8Oky6hvng">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH00LsmEeS6K8Oky6hvng">
+                  <language></language>
+                  <body>Obstacle.type=edge</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_PqH00bsmEeS6K8Oky6hvng" source="_PqH0wbsmEeS6K8Oky6hvng" target="_PqH0wrsmEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH00rsmEeS6K8Oky6hvng" name="Jump"/>
+            </transition>
+            <transition xmi:id="_PqH007smEeS6K8Oky6hvng" source="_PqH0wbsmEeS6K8Oky6hvng" target="_PqH05LsmEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH01LsmEeS6K8Oky6hvng" name="moveforward"/>
+            </transition>
+            <transition xmi:id="_PqH01bsmEeS6K8Oky6hvng" source="_PqH0v7smEeS6K8Oky6hvng" target="_PqH0xLsmEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH01rsmEeS6K8Oky6hvng" name="collide"/>
+            </transition>
+            <transition xmi:id="_PqH017smEeS6K8Oky6hvng" source="_PqH0v7smEeS6K8Oky6hvng" target="_PqH0w7smEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH02LsmEeS6K8Oky6hvng" name="Jump"/>
+            </transition>
+            <transition xmi:id="_PqH02bsmEeS6K8Oky6hvng" source="_PqH0wLsmEeS6K8Oky6hvng" target="_PqH0xbsmEeS6K8Oky6hvng" guard="_PqH02rsmEeS6K8Oky6hvng">
+              <ownedRule xmi:id="_PqH02rsmEeS6K8Oky6hvng" constrainedElement="_PqH02bsmEeS6K8Oky6hvng">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH027smEeS6K8Oky6hvng">
+                  <language>OCL</language>
+                  <body>Height>h</body>
+                </specification>
+              </ownedRule>
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH03LsmEeS6K8Oky6hvng" name="Jump"/>
+            </transition>
+            <transition xmi:id="_PqH03bsmEeS6K8Oky6hvng" source="_PqH0wLsmEeS6K8Oky6hvng" target="_PqH0uLsmEeS6K8Oky6hvng" guard="_PqH03rsmEeS6K8Oky6hvng">
+              <ownedRule xmi:id="_PqH03rsmEeS6K8Oky6hvng" constrainedElement="_PqH03bsmEeS6K8Oky6hvng">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH037smEeS6K8Oky6hvng">
+                  <language>OCL</language>
+                  <body>Height&lt;h</body>
+                </specification>
+              </ownedRule>
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH04LsmEeS6K8Oky6hvng" name="jump"/>
+            </transition>
+            <transition xmi:id="_PqH04bsmEeS6K8Oky6hvng" source="_PqH0xLsmEeS6K8Oky6hvng" target="_PqH05bsmEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH04rsmEeS6K8Oky6hvng" name="getlifecount"/>
+            </transition>
+          </region>
+          <region xmi:id="_PqH047smEeS6K8Oky6hvng" name="Region2"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_PqH05LsmEeS6K8Oky6hvng" name="die"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_PqH05bsmEeS6K8Oky6hvng" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_PqH05rsmEeS6K8Oky6hvng" name="run backward">
+          <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_PqH057smEeS6K8Oky6hvng" name="movebackward"/>
+          <region xmi:id="_PqH06LsmEeS6K8Oky6hvng" name="Region1">
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_PqH06bsmEeS6K8Oky6hvng"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_PqH06rsmEeS6K8Oky6hvng" kind="choice"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH067smEeS6K8Oky6hvng" name="Ghost Visible"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH07LsmEeS6K8Oky6hvng" name="Kill ghost"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH07bsmEeS6K8Oky6hvng" name="get hit"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH07rsmEeS6K8Oky6hvng" name="Cliff Visible"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH077smEeS6K8Oky6hvng" name="Edge Visible"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH08LsmEeS6K8Oky6hvng" name="climb cliff"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PqH08bsmEeS6K8Oky6hvng" name="climb edge"/>
+            <transition xmi:id="_PqH08rsmEeS6K8Oky6hvng" source="_PqH06bsmEeS6K8Oky6hvng" target="_PqH06rsmEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH087smEeS6K8Oky6hvng" name="Obstacles"/>
+            </transition>
+            <transition xmi:id="_PqH09LsmEeS6K8Oky6hvng" source="_PqH06rsmEeS6K8Oky6hvng" target="_PqH067smEeS6K8Oky6hvng" guard="_PqH09bsmEeS6K8Oky6hvng">
+              <ownedRule xmi:id="_PqH09bsmEeS6K8Oky6hvng" constrainedElement="_PqH09LsmEeS6K8Oky6hvng">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH09rsmEeS6K8Oky6hvng">
+                  <language>OCL</language>
+                  <body>Obstacle.type=ghost</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_PqH097smEeS6K8Oky6hvng" source="_PqH06rsmEeS6K8Oky6hvng" target="_PqH07rsmEeS6K8Oky6hvng" guard="_PqH0-LsmEeS6K8Oky6hvng">
+              <ownedRule xmi:id="_PqH0-LsmEeS6K8Oky6hvng" constrainedElement="_PqH097smEeS6K8Oky6hvng">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH0-bsmEeS6K8Oky6hvng">
+                  <language>OCL</language>
+                  <body>Obstacle.type=cliff</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_PqH0-rsmEeS6K8Oky6hvng" source="_PqH06rsmEeS6K8Oky6hvng" target="_PqH077smEeS6K8Oky6hvng" guard="_PqH0-7smEeS6K8Oky6hvng">
+              <ownedRule xmi:id="_PqH0-7smEeS6K8Oky6hvng" constrainedElement="_PqH0-rsmEeS6K8Oky6hvng">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH0_LsmEeS6K8Oky6hvng">
+                  <language>OCL</language>
+                  <body>Obstacle.type=edge</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_PqH0_bsmEeS6K8Oky6hvng" source="_PqH067smEeS6K8Oky6hvng" target="_PqH07LsmEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH0_rsmEeS6K8Oky6hvng" name="Jump"/>
+            </transition>
+            <transition xmi:id="_PqH0_7smEeS6K8Oky6hvng" source="_PqH067smEeS6K8Oky6hvng" target="_PqH07bsmEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1ALsmEeS6K8Oky6hvng" name="collide"/>
+            </transition>
+            <transition xmi:id="_PqH1AbsmEeS6K8Oky6hvng" source="_PqH07rsmEeS6K8Oky6hvng" target="_PqH08LsmEeS6K8Oky6hvng" guard="_PqH1ArsmEeS6K8Oky6hvng">
+              <ownedRule xmi:id="_PqH1ArsmEeS6K8Oky6hvng" constrainedElement="_PqH1AbsmEeS6K8Oky6hvng">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH1A7smEeS6K8Oky6hvng">
+                  <language>OCL</language>
+                  <body>Height>h</body>
+                </specification>
+              </ownedRule>
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1BLsmEeS6K8Oky6hvng" name="jump"/>
+            </transition>
+            <transition xmi:id="_PqH1BbsmEeS6K8Oky6hvng" source="_PqH077smEeS6K8Oky6hvng" target="_PqH08bsmEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1BrsmEeS6K8Oky6hvng" name="jump"/>
+            </transition>
+            <transition xmi:id="_PqH1B7smEeS6K8Oky6hvng" source="_PqH07rsmEeS6K8Oky6hvng" target="_PqH0uLsmEeS6K8Oky6hvng" guard="_PqH1CLsmEeS6K8Oky6hvng">
+              <ownedRule xmi:id="_PqH1CLsmEeS6K8Oky6hvng" constrainedElement="_PqH1B7smEeS6K8Oky6hvng">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH1CbsmEeS6K8Oky6hvng">
+                  <language>OCL</language>
+                  <body>Height&lt;h</body>
+                </specification>
+              </ownedRule>
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1CrsmEeS6K8Oky6hvng" name="jump"/>
+            </transition>
+            <transition xmi:id="_PqH1C7smEeS6K8Oky6hvng" source="_PqH077smEeS6K8Oky6hvng" target="_PqH05LsmEeS6K8Oky6hvng">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1DLsmEeS6K8Oky6hvng" name="movebackward"/>
+            </transition>
+          </region>
+          <region xmi:id="_PqH1DbsmEeS6K8Oky6hvng" name="Region2"/>
+        </subvertex>
+        <transition xmi:id="_PqH1DrsmEeS6K8Oky6hvng" source="_PqH0ubsmEeS6K8Oky6hvng" target="_PqH0uLsmEeS6K8Oky6hvng"/>
+        <transition xmi:id="_PqH1D7smEeS6K8Oky6hvng" source="_PqH0uLsmEeS6K8Oky6hvng" target="_PqH0ursmEeS6K8Oky6hvng">
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1ELsmEeS6K8Oky6hvng" name="moveforward"/>
+        </transition>
+        <transition xmi:id="_PqH1EbsmEeS6K8Oky6hvng" name="After 100 s" source="_PqH0uLsmEeS6K8Oky6hvng" target="_PqH05LsmEeS6K8Oky6hvng">
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1ErsmEeS6K8Oky6hvng" name="Effect"/>
+          <trigger xmi:id="_PqH1E7smEeS6K8Oky6hvng" name="" event="_PqH1dLsmEeS6K8Oky6hvng"/>
+        </transition>
+        <transition xmi:id="_PqH1FLsmEeS6K8Oky6hvng" source="_PqH05bsmEeS6K8Oky6hvng" target="_PqH05LsmEeS6K8Oky6hvng" guard="_PqH1FbsmEeS6K8Oky6hvng">
+          <ownedRule xmi:id="_PqH1FbsmEeS6K8Oky6hvng" constrainedElement="_PqH1FLsmEeS6K8Oky6hvng">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH1FrsmEeS6K8Oky6hvng">
+              <language>OCL</language>
+              <body>lifecount = 0</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_PqH1F7smEeS6K8Oky6hvng" source="_PqH05bsmEeS6K8Oky6hvng" target="_PqH0uLsmEeS6K8Oky6hvng" guard="_PqH1GLsmEeS6K8Oky6hvng">
+          <ownedRule xmi:id="_PqH1GLsmEeS6K8Oky6hvng" constrainedElement="_PqH1F7smEeS6K8Oky6hvng">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH1GbsmEeS6K8Oky6hvng">
+              <language>OCL</language>
+              <body>lifecount >0 or lifecount &lt; 5</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_PqH1GrsmEeS6K8Oky6hvng" source="_PqH0ursmEeS6K8Oky6hvng" target="_PqH0ursmEeS6K8Oky6hvng" guard="_PqH1G7smEeS6K8Oky6hvng">
+          <ownedRule xmi:id="_PqH1G7smEeS6K8Oky6hvng" constrainedElement="_PqH1GrsmEeS6K8Oky6hvng">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH1HLsmEeS6K8Oky6hvng">
+              <language>OCL</language>
+              <body>coins.allinstances.size()>0</body>
+            </specification>
+          </ownedRule>
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1HbsmEeS6K8Oky6hvng" name="coins++"/>
+        </transition>
+        <transition xmi:id="_PqH1HrsmEeS6K8Oky6hvng" source="_PqH05rsmEeS6K8Oky6hvng" target="_PqH05rsmEeS6K8Oky6hvng" guard="_PqH1H7smEeS6K8Oky6hvng">
+          <ownedRule xmi:id="_PqH1H7smEeS6K8Oky6hvng" constrainedElement="_PqH1HrsmEeS6K8Oky6hvng">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_PqH1ILsmEeS6K8Oky6hvng">
+              <language>OCL</language>
+              <body>coins.allinstances.size()>0</body>
+            </specification>
+          </ownedRule>
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1IbsmEeS6K8Oky6hvng" name="coins++"/>
+        </transition>
+        <transition xmi:id="_PqH1IrsmEeS6K8Oky6hvng" source="_PqH0uLsmEeS6K8Oky6hvng" target="_PqH05rsmEeS6K8Oky6hvng">
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1I7smEeS6K8Oky6hvng" name="movebackward"/>
+        </transition>
+        <transition xmi:id="_PqH1JLsmEeS6K8Oky6hvng" source="_PqH0ursmEeS6K8Oky6hvng" target="_PqH05rsmEeS6K8Oky6hvng">
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1JbsmEeS6K8Oky6hvng" name="movebackward"/>
+        </transition>
+        <transition xmi:id="_PqH1JrsmEeS6K8Oky6hvng" source="_PqH05rsmEeS6K8Oky6hvng" target="_PqH0ursmEeS6K8Oky6hvng">
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_PqH1J7smEeS6K8Oky6hvng" name="moveforward"/>
+        </transition>
+      </region>
+    </ownedBehavior>
+  </packagedElement>
+  <packagedElement xmi:type="uml:TimeEvent" xmi:id="_PqH1KLsmEeS6K8Oky6hvng" name="TimeEvent1">
+    <when xmi:id="_PqH1KbsmEeS6K8Oky6hvng">
+      <expr xmi:type="uml:LiteralString" xmi:id="_PqH1KrsmEeS6K8Oky6hvng" value=""/>
+    </when>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1K7smEeS6K8Oky6hvng" name="User">
+    <ownedAttribute xmi:id="_PqH1LLsmEeS6K8Oky6hvng" name="game" visibility="private" type="_PqH1L7smEeS6K8Oky6hvng" association="_PqH1bbsmEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1LbsmEeS6K8Oky6hvng" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1LrsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1L7smEeS6K8Oky6hvng" name="Game">
+    <ownedAttribute xmi:id="_PqH1MLsmEeS6K8Oky6hvng" name="user" visibility="private" type="_PqH1K7smEeS6K8Oky6hvng" association="_PqH1bbsmEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1MbsmEeS6K8Oky6hvng" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1MrsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_PqH1M7smEeS6K8Oky6hvng" name="level" visibility="private" type="_PqH1QrsmEeS6K8Oky6hvng" association="_PqH1brsmEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1NLsmEeS6K8Oky6hvng" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1NbsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_PqH1NrsmEeS6K8Oky6hvng" name="score" visibility="private" type="_PqH1VLsmEeS6K8Oky6hvng" association="_PqH1b7smEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1N7smEeS6K8Oky6hvng" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1OLsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_PqH1ObsmEeS6K8Oky6hvng" name="map" visibility="private" type="_PqH1absmEeS6K8Oky6hvng" association="_PqH1cLsmEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1OrsmEeS6K8Oky6hvng" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1O7smEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_PqH1PLsmEeS6K8Oky6hvng" name="characters" visibility="private" type="_PqH1SrsmEeS6K8Oky6hvng" association="_PqH1cbsmEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1PbsmEeS6K8Oky6hvng" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1PrsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_PqH1P7smEeS6K8Oky6hvng" name="obstacles" visibility="private" type="_PqH1RrsmEeS6K8Oky6hvng" association="_PqH1crsmEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1QLsmEeS6K8Oky6hvng" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1QbsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1QrsmEeS6K8Oky6hvng" name="Level">
+    <ownedAttribute xmi:id="_PqH1Q7smEeS6K8Oky6hvng" name="game" visibility="private" type="_PqH1L7smEeS6K8Oky6hvng" association="_PqH1brsmEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1RLsmEeS6K8Oky6hvng" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1RbsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1RrsmEeS6K8Oky6hvng" name="Obstacles">
+    <ownedAttribute xmi:id="_PqH1R7smEeS6K8Oky6hvng" name="game" visibility="private" type="_PqH1L7smEeS6K8Oky6hvng" association="_PqH1crsmEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1SLsmEeS6K8Oky6hvng" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1SbsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1SrsmEeS6K8Oky6hvng" name="Characters">
+    <ownedAttribute xmi:id="_PqH1S7smEeS6K8Oky6hvng" name="game" visibility="private" type="_PqH1L7smEeS6K8Oky6hvng" association="_PqH1cbsmEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1TLsmEeS6K8Oky6hvng" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1TbsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1TrsmEeS6K8Oky6hvng" name="Avatar">
+    <generalization xmi:id="_PqH1T7smEeS6K8Oky6hvng" general="_PqH1SrsmEeS6K8Oky6hvng"/>
+    <ownedAttribute xmi:id="_PqH1ULsmEeS6K8Oky6hvng" name="actions" visibility="public" type="_PqH1WLsmEeS6K8Oky6hvng" association="_PqH1c7smEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1UbsmEeS6K8Oky6hvng" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1UrsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_PqH1U7smEeS6K8Oky6hvng" name="lives" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1VLsmEeS6K8Oky6hvng" name="Score">
+    <ownedAttribute xmi:id="_PqH1VbsmEeS6K8Oky6hvng" name="game" visibility="private" type="_PqH1L7smEeS6K8Oky6hvng" association="_PqH1b7smEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1VrsmEeS6K8Oky6hvng" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1V7smEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1WLsmEeS6K8Oky6hvng" name="Actions">
+    <ownedAttribute xmi:id="_PqH1WbsmEeS6K8Oky6hvng" name="avatar" visibility="private" type="_PqH1TrsmEeS6K8Oky6hvng" association="_PqH1c7smEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1WrsmEeS6K8Oky6hvng" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1W7smEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1XLsmEeS6K8Oky6hvng" name="Run">
+    <generalization xmi:id="_PqH1XbsmEeS6K8Oky6hvng" general="_PqH1WLsmEeS6K8Oky6hvng"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1XrsmEeS6K8Oky6hvng" name="Die">
+    <generalization xmi:id="_PqH1X7smEeS6K8Oky6hvng" general="_PqH1WLsmEeS6K8Oky6hvng"/>
+    <ownedAttribute xmi:id="_PqH1YLsmEeS6K8Oky6hvng" name="time_elapsed" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1YbsmEeS6K8Oky6hvng" name="Jump">
+    <generalization xmi:id="_PqH1YrsmEeS6K8Oky6hvng" general="_PqH1WLsmEeS6K8Oky6hvng"/>
+    <ownedAttribute xmi:id="_PqH1Y7smEeS6K8Oky6hvng" name="height" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1ZLsmEeS6K8Oky6hvng" name="Cliff">
+    <generalization xmi:id="_PqH1ZbsmEeS6K8Oky6hvng" general="_PqH1RrsmEeS6K8Oky6hvng"/>
+    <ownedAttribute xmi:id="_PqH1ZrsmEeS6K8Oky6hvng" name="height" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1Z7smEeS6K8Oky6hvng" name="Edge">
+    <generalization xmi:id="_PqH1aLsmEeS6K8Oky6hvng" general="_PqH1RrsmEeS6K8Oky6hvng"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PqH1absmEeS6K8Oky6hvng" name="Map">
+    <ownedAttribute xmi:id="_PqH1arsmEeS6K8Oky6hvng" name="game" visibility="private" type="_PqH1L7smEeS6K8Oky6hvng" association="_PqH1cLsmEeS6K8Oky6hvng">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqH1a7smEeS6K8Oky6hvng" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqH1bLsmEeS6K8Oky6hvng" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PqH1bbsmEeS6K8Oky6hvng" name="plays" memberEnd="_PqH1LLsmEeS6K8Oky6hvng _PqH1MLsmEeS6K8Oky6hvng"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PqH1brsmEeS6K8Oky6hvng" name="has" memberEnd="_PqH1M7smEeS6K8Oky6hvng _PqH1Q7smEeS6K8Oky6hvng"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PqH1b7smEeS6K8Oky6hvng" name="has" memberEnd="_PqH1NrsmEeS6K8Oky6hvng _PqH1VbsmEeS6K8Oky6hvng"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PqH1cLsmEeS6K8Oky6hvng" name="has" memberEnd="_PqH1ObsmEeS6K8Oky6hvng _PqH1arsmEeS6K8Oky6hvng"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PqH1cbsmEeS6K8Oky6hvng" name="has" memberEnd="_PqH1PLsmEeS6K8Oky6hvng _PqH1S7smEeS6K8Oky6hvng"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PqH1crsmEeS6K8Oky6hvng" name="has" memberEnd="_PqH1P7smEeS6K8Oky6hvng _PqH1R7smEeS6K8Oky6hvng"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PqH1c7smEeS6K8Oky6hvng" name="performs" memberEnd="_PqH1ULsmEeS6K8Oky6hvng _PqH1WbsmEeS6K8Oky6hvng"/>
+  <packagedElement xmi:type="uml:TimeEvent" xmi:id="_PqH1dLsmEeS6K8Oky6hvng" name="TimeEvent2">
+    <when xmi:id="_PqH1dbsmEeS6K8Oky6hvng"/>
+  </packagedElement>
+  <profileApplication xmi:id="_PqH1drsmEeS6K8Oky6hvng">
+    <eAnnotations xmi:id="_PqH1d7smEeS6K8Oky6hvng" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Model>
